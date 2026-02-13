@@ -7,6 +7,8 @@ A modular Python pipeline that infers HCPCS/CPT medical procedure codes from hea
 ```bash
 pip install -r requirements.txt
 
+source .env
+
 # Default method (TF-IDF):
 python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json
 
@@ -31,7 +33,7 @@ python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json
 | `--threshold`     | 0.05                  | Minimum confidence threshold  |
 | `--labels`        | _(none)_              | Labels CSV for evaluation     |
 
-To test model performance run with
+To test model performance run with --labels policies_cleaned_labels.csv
 
 ## Architecture
 
