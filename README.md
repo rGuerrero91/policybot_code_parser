@@ -13,9 +13,6 @@ python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json
 # With evaluation against ground truth:
 python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json --labels policies_cleaned_labels.csv
 
-# Mock LLM (no API key needed):
-python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json --method llm_mock
-
 # Real LLM (requires OPENAI_API_KEY):
 export OPENAI_API_KEY=sk-...
 python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json --method llm_openai --limit 5
@@ -23,16 +20,18 @@ python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json
 
 ### CLI Options
 
-| Flag | Default | Description |
-|------|---------|-------------|
-| `--input` | *(required)* | Path to policies CSV |
-| `--output` | `inferred_codes.json` | Output JSON path |
-| `--hcpcs-catalog` | `hcpcs.csv` | HCPCS reference CSV |
-| `--method` | `lexical_tfidf` | `lexical_tfidf`, `llm_openai`, or `llm_mock` |
-| `--limit` | all | Process only first N policies |
-| `--top-k` | 10 | Max codes per policy |
-| `--threshold` | 0.05 | Minimum confidence threshold |
-| `--labels` | *(none)* | Labels CSV for evaluation |
+| Flag              | Default               | Description                   |
+| ----------------- | --------------------- | ----------------------------- |
+| `--input`         | _(required)_          | Path to policies CSV          |
+| `--output`        | `inferred_codes.json` | Output JSON path              |
+| `--hcpcs-catalog` | `hcpcs.csv`           | HCPCS reference CSV           |
+| `--method`        | `lexical_tfidf`       | `lexical_tfidf`, `llm_openai` |
+| `--limit`         | all                   | Process only first N policies |
+| `--top-k`         | 10                    | Max codes per policy          |
+| `--threshold`     | 0.05                  | Minimum confidence threshold  |
+| `--labels`        | _(none)_              | Labels CSV for evaluation     |
+
+To test model performance run with
 
 ## Architecture
 
@@ -48,7 +47,6 @@ src/policybot_hcpcs/
   inference/registry.py             # Method registration and factory
   inference/lexical.py              # TF-IDF + literal match (primary v1)
   inference/llm_openai.py           # OpenAI GPT inference
-  inference/llm_mock.py             # Regex fallback (no API key)
   evaluation/metrics.py             # Recall@k, precision@k, coverage
 ```
 
@@ -96,7 +94,7 @@ class LexicalTfidfMethod(BaseInferenceMethod): ...
     "hcpcs_catalog_file": "hcpcs.csv",
     "total_policies": 200,
     "total_inferences": 1941,
-    "parameters": {"top_k": 10, "threshold": 0.05}
+    "parameters": { "top_k": 10, "threshold": 0.05 }
   },
   "results": [
     {
@@ -114,7 +112,7 @@ class LexicalTfidfMethod(BaseInferenceMethod): ...
             "method": "lexical_tfidf",
             "timestamp": "2026-02-13T21:34:46Z",
             "inputs_hash": "f8fc8ac0dd19...",
-            "parameters": {"top_k": 10, "threshold": 0.05},
+            "parameters": { "top_k": 10, "threshold": 0.05 },
             "evidence": [
               {
                 "evidence_type": "tfidf_similarity",
@@ -126,7 +124,7 @@ class LexicalTfidfMethod(BaseInferenceMethod): ...
                 "evidence_type": "text_match",
                 "source": "policy_text",
                 "snippet": "...HCPCS Code J3031 for injection...",
-                "span": {"start": 4521, "end": 4526, "text": "J3031"}
+                "span": { "start": 4521, "end": 4526, "text": "J3031" }
               }
             ],
             "artifacts": {}
@@ -158,6 +156,7 @@ class LexicalTfidfMethod(BaseInferenceMethod): ...
 3. Takes top-k results above the confidence threshold
 4. Scans for literal code patterns (e.g., `J3031`, `99213`) and boosts confidence +0.3
 5. Deterministic — same input always produces same output
+6. Useful for testing pipeline structure without API costs
 
 ### `llm_openai` (requires `OPENAI_API_KEY`)
 
@@ -165,18 +164,11 @@ class LexicalTfidfMethod(BaseInferenceMethod): ...
 2. Temperature=0 for near-deterministic results
 3. Captures model version, prompt hash, and token usage in provenance artifacts
 
-### `llm_mock` (no API key needed)
-
-1. Regex extraction of code patterns from policy text
-2. Cross-references against HCPCS catalog
-3. Fixed confidence of 0.6
-4. Useful for testing pipeline structure without API costs
-
 ## Handling Uncertainty
 
 - **Confidence scores** are transparent: TF-IDF cosine similarity is directly used (0–1 range), with explicit boosts for literal matches
 - **Thresholds** are configurable via `--threshold` to control the precision/recall tradeoff
-- **Per-code provenance** lets consumers inspect *why* each code was inferred and at what confidence
+- **Per-code provenance** lets consumers inspect _why_ each code was inferred and at what confidence
 - **Error isolation**: A single policy failure doesn't halt the pipeline — it produces an empty inference list and logs the error
 
 ## v2 Evolution Plan: Multi-Method Support
@@ -215,14 +207,24 @@ New model:
     "methods": ["lexical_tfidf", "rag_embedding"],
     "reconciliation_strategy": "weighted_average"
   },
-  "results": [{
-    "policy_id": "...",
-    "inferences": [{"code": "J3031", "confidence": 0.82, "...": "reconciled result"}],
-    "method_results": [
-      {"method": "lexical_tfidf", "inferences": [{"code": "J3031", "confidence": 0.55}]},
-      {"method": "rag_embedding", "inferences": [{"code": "J3031", "confidence": 0.92}]}
-    ]
-  }]
+  "results": [
+    {
+      "policy_id": "...",
+      "inferences": [
+        { "code": "J3031", "confidence": 0.82, "...": "reconciled result" }
+      ],
+      "method_results": [
+        {
+          "method": "lexical_tfidf",
+          "inferences": [{ "code": "J3031", "confidence": 0.55 }]
+        },
+        {
+          "method": "rag_embedding",
+          "inferences": [{ "code": "J3031", "confidence": 0.92 }]
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -236,14 +238,14 @@ New model:
 
 ## Design Tradeoffs
 
-| Decision | Tradeoff |
-|----------|----------|
-| TF-IDF as primary method | Low accuracy but deterministic, explainable, no API dependency |
-| Pydantic v2 for schemas | Adds a dependency but provides validation, serialization, and self-documenting fields |
-| Per-inference provenance | Higher storage cost per record, but enables full auditability |
-| SHA-256 inputs_hash | Enables reproducibility checks without storing raw text in the audit trail |
-| Strategy pattern + registry | Small upfront complexity, but makes adding methods trivial |
-| Flat JSON output | Simple for consumers; v2 adds nested `method_results` only for multi-method runs |
+| Decision                    | Tradeoff                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------- |
+| TF-IDF as primary method    | Low accuracy but deterministic, explainable, no API dependency                        |
+| Pydantic v2 for schemas     | Adds a dependency but provides validation, serialization, and self-documenting fields |
+| Per-inference provenance    | Higher storage cost per record, but enables full auditability                         |
+| SHA-256 inputs_hash         | Enables reproducibility checks without storing raw text in the audit trail            |
+| Strategy pattern + registry | Small upfront complexity, but makes adding methods trivial                            |
+| Flat JSON output            | Simple for consumers; v2 adds nested `method_results` only for multi-method runs      |
 
 ## Evaluation
 
@@ -254,6 +256,7 @@ When `--labels` is provided, the pipeline computes:
 - **Coverage**: Fraction of policies with at least one correct code
 
 Current v1 baseline (TF-IDF, top_k=10):
+
 - recall@10: ~1.3%
 - precision@10: ~2.8%
 - coverage: ~7.5%

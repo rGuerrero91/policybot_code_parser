@@ -71,7 +71,7 @@ class LlmOpenaiMethod(BaseInferenceMethod):
         if not api_key:
             raise RuntimeError(
                 "OPENAI_API_KEY environment variable not set. "
-                "Use --method lexical_tfidf or --method llm_mock instead."
+                "Use --method lexical_tfidf instead."
             )
 
         import openai

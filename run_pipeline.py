@@ -3,7 +3,6 @@ HCPCS Inference Service v1 — CLI Entrypoint.
 
 Usage:
     python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json
-    python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json --method llm_mock
     python run_pipeline.py --input policies_cleaned.csv --output inferred_codes.json --method llm_openai --limit 5
 """
 import argparse
@@ -29,7 +28,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--method", default="lexical_tfidf",
-        choices=["lexical_tfidf", "llm_openai", "llm_mock"],
+        choices=["lexical_tfidf", "llm_openai"],
         help="Inference method to use (default: lexical_tfidf)",
     )
     parser.add_argument(
