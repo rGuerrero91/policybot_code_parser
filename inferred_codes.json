@@ -1,0 +1,738 @@
+{
+  "run_metadata": {
+    "pipeline_version": "1.0.0",
+    "schema_version": "1.0.0",
+    "run_timestamp": "2026-02-13T22:38:54.664760Z",
+    "method": "lexical_tfidf",
+    "input_file": "policies_cleaned.csv",
+    "hcpcs_catalog_file": "hcpcs.csv",
+    "total_policies": 3,
+    "total_inferences": 26,
+    "parameters": {
+      "top_k": 10,
+      "threshold": 0.05
+    }
+  },
+  "results": [
+    {
+      "policy_id": "fffed90d-e90e-4454-9e4c-3f462ec2011c",
+      "policy_name": null,
+      "inferences": [
+        {
+          "code": "77300",
+          "code_system": "HCPCS",
+          "code_description": "Radiation therapy dose plan",
+          "confidence": 0.2407,
+          "justification": "HCPCS 77300 (Radiation therapy dose plan) matched via TF-IDF similarity (score=0.241).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656593Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Radiation therapy dose plan",
+                "span": null,
+                "score": 0.240658798357044
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "77301",
+          "code_system": "HCPCS",
+          "code_description": "Radiotherapy dose plan imrt",
+          "confidence": 0.188,
+          "justification": "HCPCS 77301 (Radiotherapy dose plan imrt) matched via TF-IDF similarity (score=0.188).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656621Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Radiotherapy dose plan imrt",
+                "span": null,
+                "score": 0.18802037485759643
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "76981",
+          "code_system": "HCPCS",
+          "code_description": "Use parenchyma",
+          "confidence": 0.1779,
+          "justification": "HCPCS 76981 (Use parenchyma) matched via TF-IDF similarity (score=0.178).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656631Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Use parenchyma",
+                "span": null,
+                "score": 0.1779440545169099
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "Q0222",
+          "code_system": "HCPCS",
+          "code_description": "Bebtelovimab 175 mg",
+          "confidence": 0.1678,
+          "justification": "HCPCS Q0222 (Bebtelovimab 175 mg) matched via TF-IDF similarity (score=0.168).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656637Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Bebtelovimab 175 mg",
+                "span": null,
+                "score": 0.16783819934437316
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "Q9958",
+          "code_system": "HCPCS",
+          "code_description": "HOCM <=149 mg/ml iodine, 1ml",
+          "confidence": 0.146,
+          "justification": "HCPCS Q9958 (HOCM <=149 mg/ml iodine, 1ml) matched via TF-IDF similarity (score=0.146).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656642Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "HOCM <=149 mg/ml iodine, 1ml",
+                "span": null,
+                "score": 0.14595925596106987
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "Q0224",
+          "code_system": "HCPCS",
+          "code_description": "Inj, pemivibart, 4500 mg",
+          "confidence": 0.1455,
+          "justification": "HCPCS Q0224 (Inj, pemivibart, 4500 mg) matched via TF-IDF similarity (score=0.146).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656648Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Inj, pemivibart, 4500 mg",
+                "span": null,
+                "score": 0.1455435074762092
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "Q9951",
+          "code_system": "HCPCS",
+          "code_description": "LOCM>=400 mg/ml iodine,1ml",
+          "confidence": 0.145,
+          "justification": "HCPCS Q9951 (LOCM>=400 mg/ml iodine,1ml) matched via TF-IDF similarity (score=0.145).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656653Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "LOCM>=400 mg/ml iodine,1ml",
+                "span": null,
+                "score": 0.14498713736964391
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "Q0244",
+          "code_system": "HCPCS",
+          "code_description": "Casirivi and imdevi 1200 mg",
+          "confidence": 0.144,
+          "justification": "HCPCS Q0244 (Casirivi and imdevi 1200 mg) matched via TF-IDF similarity (score=0.144).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656658Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Casirivi and imdevi 1200 mg",
+                "span": null,
+                "score": 0.14398273482893795
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "Q0240",
+          "code_system": "HCPCS",
+          "code_description": "Casirivi and imdevi 600 mg",
+          "confidence": 0.144,
+          "justification": "HCPCS Q0240 (Casirivi and imdevi 600 mg) matched via TF-IDF similarity (score=0.144).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656665Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Casirivi and imdevi 600 mg",
+                "span": null,
+                "score": 0.14398273482893795
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "97164",
+          "code_system": "HCPCS",
+          "code_description": "Pt re-eval est plan care",
+          "confidence": 0.1245,
+          "justification": "HCPCS 97164 (Pt re-eval est plan care) matched via TF-IDF similarity (score=0.125).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.656671Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Pt re-eval est plan care",
+                "span": null,
+                "score": 0.12450053684759141
+              }
+            ],
+            "artifacts": {}
+          }
+        }
+      ]
+    },
+    {
+      "policy_id": "fffea6c5-c715-4dc5-9ed8-6bd171fe37a5",
+      "policy_name": null,
+      "inferences": [
+        {
+          "code": "92609",
+          "code_system": "HCPCS",
+          "code_description": "Use of speech device service",
+          "confidence": 0.2847,
+          "justification": "HCPCS 92609 (Use of speech device service) matched via TF-IDF similarity (score=0.285).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661465Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Use of speech device service",
+                "span": null,
+                "score": 0.2846736231100139
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "78811",
+          "code_system": "HCPCS",
+          "code_description": "PET image ltd area",
+          "confidence": 0.1484,
+          "justification": "HCPCS 78811 (PET image ltd area) matched via TF-IDF similarity (score=0.148).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661481Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "PET image ltd area",
+                "span": null,
+                "score": 0.14838000103101298
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "97164",
+          "code_system": "HCPCS",
+          "code_description": "Pt re-eval est plan care",
+          "confidence": 0.1377,
+          "justification": "HCPCS 97164 (Pt re-eval est plan care) matched via TF-IDF similarity (score=0.138).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661488Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Pt re-eval est plan care",
+                "span": null,
+                "score": 0.137673508690365
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "97168",
+          "code_system": "HCPCS",
+          "code_description": "Ot re-eval est plan care",
+          "confidence": 0.1328,
+          "justification": "HCPCS 97168 (Ot re-eval est plan care) matched via TF-IDF similarity (score=0.133).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661494Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Ot re-eval est plan care",
+                "span": null,
+                "score": 0.1327668683705106
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "86985",
+          "code_system": "HCPCS",
+          "code_description": "Split blood or products",
+          "confidence": 0.1287,
+          "justification": "HCPCS 86985 (Split blood or products) matched via TF-IDF similarity (score=0.129).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661499Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Split blood or products",
+                "span": null,
+                "score": 0.128749743621921
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "78300",
+          "code_system": "HCPCS",
+          "code_description": "Bone imaging limited area",
+          "confidence": 0.1241,
+          "justification": "HCPCS 78300 (Bone imaging limited area) matched via TF-IDF similarity (score=0.124).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661505Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Bone imaging limited area",
+                "span": null,
+                "score": 0.12409944547383495
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "76100",
+          "code_system": "HCPCS",
+          "code_description": "X-ray exam of body section",
+          "confidence": 0.1182,
+          "justification": "HCPCS 76100 (X-ray exam of body section) matched via TF-IDF similarity (score=0.118).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661513Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "X-ray exam of body section",
+                "span": null,
+                "score": 0.11817816873651368
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "97535",
+          "code_system": "HCPCS",
+          "code_description": "Self care mngment training",
+          "confidence": 0.1133,
+          "justification": "HCPCS 97535 (Self care mngment training) matched via TF-IDF similarity (score=0.113).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661519Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Self care mngment training",
+                "span": null,
+                "score": 0.11325803510937252
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "78800",
+          "code_system": "HCPCS",
+          "code_description": "Rp loclzj tum 1 area 1 d img",
+          "confidence": 0.1108,
+          "justification": "HCPCS 78800 (Rp loclzj tum 1 area 1 d img) matched via TF-IDF similarity (score=0.111).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661525Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Rp loclzj tum 1 area 1 d img",
+                "span": null,
+                "score": 0.11080887318006184
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "78801",
+          "code_system": "HCPCS",
+          "code_description": "Rp loclzj tum 2+area 1+d img",
+          "confidence": 0.1108,
+          "justification": "HCPCS 78801 (Rp loclzj tum 2+area 1+d img) matched via TF-IDF similarity (score=0.111).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.661531Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Rp loclzj tum 2+area 1+d img",
+                "span": null,
+                "score": 0.11080887318006184
+              }
+            ],
+            "artifacts": {}
+          }
+        }
+      ]
+    },
+    {
+      "policy_id": "fffdc557-54e1-4204-b6bf-96a619c118d0",
+      "policy_name": null,
+      "inferences": [
+        {
+          "code": "71271",
+          "code_system": "HCPCS",
+          "code_description": "Ct thorax lung cancer scr c-",
+          "confidence": 0.3443,
+          "justification": "HCPCS 71271 (Ct thorax lung cancer scr c-) matched via TF-IDF similarity (score=0.344).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.664634Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Ct thorax lung cancer scr c-",
+                "span": null,
+                "score": 0.34434661315340503
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "0898T",
+          "code_system": "HCPCS",
+          "code_description": "N-invas prst8 cancer est map",
+          "confidence": 0.2317,
+          "justification": "HCPCS 0898T (N-invas prst8 cancer est map) matched via TF-IDF similarity (score=0.232).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.664646Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "N-invas prst8 cancer est map",
+                "span": null,
+                "score": 0.23172970321993183
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "G0103",
+          "code_system": "HCPCS",
+          "code_description": "PSA screening",
+          "confidence": 0.2233,
+          "justification": "HCPCS G0103 (PSA screening) matched via TF-IDF similarity (score=0.223).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.664652Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "PSA screening",
+                "span": null,
+                "score": 0.22332277594478428
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "74263",
+          "code_system": "HCPCS",
+          "code_description": "Ct colonography screening",
+          "confidence": 0.1899,
+          "justification": "HCPCS 74263 (Ct colonography screening) matched via TF-IDF similarity (score=0.190).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.664658Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Ct colonography screening",
+                "span": null,
+                "score": 0.189873771805144
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "81528",
+          "code_system": "HCPCS",
+          "code_description": "Oncology colorectal scr",
+          "confidence": 0.1824,
+          "justification": "HCPCS 81528 (Oncology colorectal scr) matched via TF-IDF similarity (score=0.182).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.664663Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Oncology colorectal scr",
+                "span": null,
+                "score": 0.18236723273491282
+              }
+            ],
+            "artifacts": {}
+          }
+        },
+        {
+          "code": "P3001",
+          "code_system": "HCPCS",
+          "code_description": "Screening pap smear by phys",
+          "confidence": 0.1449,
+          "justification": "HCPCS P3001 (Screening pap smear by phys) matched via TF-IDF similarity (score=0.145).",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "lexical_tfidf",
+            "timestamp": "2026-02-13T22:38:54.664668Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "threshold": 0.05
+            },
+            "evidence": [
+              {
+                "evidence_type": "tfidf_similarity",
+                "source": "hcpcs_catalog",
+                "snippet": "Screening pap smear by phys",
+                "span": null,
+                "score": 0.1449005684233141
+              }
+            ],
+            "artifacts": {}
+          }
+        }
+      ]
+    }
+  ]
+}

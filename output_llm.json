@@ -1,0 +1,1238 @@
+{
+  "NOTE": "This file is the Output from running the LLM-based inference pipeline on the policies dataset, including metadata about the run and detailed results for each policy and inferred code.",
+
+  "run_metadata": {
+    "pipeline_version": "1.0.0",
+    "schema_version": "1.0.0",
+    "run_timestamp": "2026-02-13T22:49:58.222465Z",
+    "method": "llm_openai",
+    "input_file": "policies_cleaned.csv",
+    "hcpcs_catalog_file": "hcpcs.csv",
+    "total_policies": 5,
+    "total_inferences": 33,
+    "parameters": {
+      "top_k": 10,
+      "threshold": 0.05
+    }
+  },
+  "results": [
+    {
+      "policy_id": "fffed90d-e90e-4454-9e4c-3f462ec2011c",
+      "policy_name": null,
+      "inferences": [
+        {
+          "code": "J1442",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 1.0,
+          "justification": "Fremanezumab-vfrm (Ajovy) is the subject of the policy, and this code specifically refers to the injection of fremanezumab, which is relevant for billing purposes.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:48:44.700628Z",
+            "inputs_hash": "f8fc8ac0dd1986c597b680ccb41e549f05863aaeb701bdce1e0f2e0774799eec",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "Fremanezumab-vfrm (Ajovy) is the subject of the policy, and this code specifically refers to the injection of fremanezumab, which is relevant for billing purposes.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFkBQOTOOjMLgHpSq9ufpc8NLMt",
+              "usage": {
+                "prompt_tokens": 19374,
+                "completion_tokens": 60
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "policy_id": "fffea6c5-c715-4dc5-9ed8-6bd171fe37a5",
+      "policy_name": null,
+      "inferences": [
+        {
+          "code": "G0103",
+          "code_system": "HCPCS",
+          "code_description": "PSA screening",
+          "confidence": 0.9,
+          "justification": "This code is for PSA screening, which is relevant to the policy as it discusses reimbursement policies for various medical services, including screenings.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546877Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for PSA screening, which is relevant to the policy as it discusses reimbursement policies for various medical services, including screenings.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        },
+        {
+          "code": "G0123",
+          "code_system": "HCPCS",
+          "code_description": "Screen cerv/vag thin layer",
+          "confidence": 0.9,
+          "justification": "This code is for cervical/vaginal screening using thin layer technology, which is relevant to the policy's focus on reimbursement for screening services.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546905Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for cervical/vaginal screening using thin layer technology, which is relevant to the policy's focus on reimbursement for screening services.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        },
+        {
+          "code": "G0327",
+          "code_system": "HCPCS",
+          "code_description": "Colon ca scrn;bld-bsd biomrk",
+          "confidence": 0.8,
+          "justification": "This code is for colon cancer screening using a blood-based biomarker, aligning with the policy's emphasis on reimbursement for cancer screenings.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546915Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for colon cancer screening using a blood-based biomarker, aligning with the policy's emphasis on reimbursement for cancer screenings.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        },
+        {
+          "code": "G0328",
+          "code_system": "HCPCS",
+          "code_description": "Fecal blood scrn immunoassay",
+          "confidence": 0.8,
+          "justification": "This code is for fecal blood screening immunoassay, which is relevant to the policy's focus on cancer screening reimbursements.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546930Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for fecal blood screening immunoassay, which is relevant to the policy's focus on cancer screening reimbursements.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        },
+        {
+          "code": "P3001",
+          "code_system": "HCPCS",
+          "code_description": "Screening pap smear by phys",
+          "confidence": 0.8,
+          "justification": "This code is for screening pap smear by a physician, which is relevant to the policy's focus on reimbursement for preventive services.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546985Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for screening pap smear by a physician, which is relevant to the policy's focus on reimbursement for preventive services.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        },
+        {
+          "code": "P3000",
+          "code_system": "HCPCS",
+          "code_description": "Screen pap by tech w md supv",
+          "confidence": 0.8,
+          "justification": "This code is for screening pap by a technician with physician supervision, relevant to the policy's emphasis on screening services.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546994Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for screening pap by a technician with physician supervision, relevant to the policy's emphasis on screening services.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        },
+        {
+          "code": "G0432",
+          "code_system": "HCPCS",
+          "code_description": "EIA HIV-1/HIV-2 screen",
+          "confidence": 0.7,
+          "justification": "This code is for EIA HIV-1/HIV-2 screening, which is relevant as the policy outlines reimbursement for various diagnostic tests.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546938Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for EIA HIV-1/HIV-2 screening, which is relevant as the policy outlines reimbursement for various diagnostic tests.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        },
+        {
+          "code": "G0433",
+          "code_system": "HCPCS",
+          "code_description": "ELISA HIV-1/HIV-2 screen",
+          "confidence": 0.7,
+          "justification": "This code is for ELISA HIV-1/HIV-2 screening, relevant to the policy's focus on reimbursement for diagnostic services.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546945Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for ELISA HIV-1/HIV-2 screening, relevant to the policy's focus on reimbursement for diagnostic services.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        },
+        {
+          "code": "G0475",
+          "code_system": "HCPCS",
+          "code_description": "HIV combination assay",
+          "confidence": 0.7,
+          "justification": "This code is for HIV combination assays, which are relevant to the policy's discussion on reimbursement for diagnostic tests.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:09.546952Z",
+            "inputs_hash": "b0ac7d1cc0c12cf80a63314602a3f74390dfd52f5db60a49a9f0b07e374d8d6f",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for HIV combination assays, which are relevant to the policy's discussion on reimbursement for diagnostic tests.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wFptjKYIoc9yFApBgjqkc5aAOnH",
+              "usage": {
+                "prompt_tokens": 19009,
+                "completion_tokens": 493
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "policy_id": "fffdc557-54e1-4204-b6bf-96a619c118d0",
+      "policy_name": null,
+      "inferences": [
+        {
+          "code": "0002U",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.9,
+          "justification": "This code corresponds to urinary biomarker tests for pre-cancerous polyps, which are mentioned in the policy as being investigational for colorectal cancer screening.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:27.011468Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code corresponds to urinary biomarker tests for pre-cancerous polyps, which are mentioned in the policy as being investigational for colorectal cancer screening.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGEO41iOZPCES0vshjTnI8EfodI",
+              "usage": {
+                "prompt_tokens": 19084,
+                "completion_tokens": 432
+              }
+            }
+          }
+        },
+        {
+          "code": "0091U",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.9,
+          "justification": "This code is for blood-based biomarker colorectal cancer screening tests, which are referenced in the policy as being considered investigational.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:27.011503Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for blood-based biomarker colorectal cancer screening tests, which are referenced in the policy as being considered investigational.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGEO41iOZPCES0vshjTnI8EfodI",
+              "usage": {
+                "prompt_tokens": 19084,
+                "completion_tokens": 432
+              }
+            }
+          }
+        },
+        {
+          "code": "0163U",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.9,
+          "justification": "This code is associated with blood-based biomarker tests for colorectal cancer screening, which are discussed in the policy as investigational.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:27.011522Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is associated with blood-based biomarker tests for colorectal cancer screening, which are discussed in the policy as investigational.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGEO41iOZPCES0vshjTnI8EfodI",
+              "usage": {
+                "prompt_tokens": 19084,
+                "completion_tokens": 432
+              }
+            }
+          }
+        },
+        {
+          "code": "0368U",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.9,
+          "justification": "This code pertains to another blood-based biomarker colorectal cancer screening test mentioned in the policy as investigational.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:27.011536Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code pertains to another blood-based biomarker colorectal cancer screening test mentioned in the policy as investigational.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGEO41iOZPCES0vshjTnI8EfodI",
+              "usage": {
+                "prompt_tokens": 19084,
+                "completion_tokens": 432
+              }
+            }
+          }
+        },
+        {
+          "code": "74263",
+          "code_system": "HCPCS",
+          "code_description": "Ct colonography screening",
+          "confidence": 0.9,
+          "justification": "This code is for CT colonography screening, which is a method of colorectal cancer screening mentioned in the policy.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:27.011582Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for CT colonography screening, which is a method of colorectal cancer screening mentioned in the policy.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGEO41iOZPCES0vshjTnI8EfodI",
+              "usage": {
+                "prompt_tokens": 19084,
+                "completion_tokens": 432
+              }
+            }
+          }
+        },
+        {
+          "code": "0898T",
+          "code_system": "HCPCS",
+          "code_description": "N-invas prst8 cancer est map",
+          "confidence": 0.85,
+          "justification": "This code is for non-invasive prostate cancer estimation, which is relevant to the broader context of cancer screening discussed in the policy.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:27.011572Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for non-invasive prostate cancer estimation, which is relevant to the broader context of cancer screening discussed in the policy.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGEO41iOZPCES0vshjTnI8EfodI",
+              "usage": {
+                "prompt_tokens": 19084,
+                "completion_tokens": 432
+              }
+            }
+          }
+        },
+        {
+          "code": "G0327",
+          "code_system": "HCPCS",
+          "code_description": "Colon ca scrn;bld-bsd biomrk",
+          "confidence": 0.8,
+          "justification": "This code is for blood-based biomarker screening for colon cancer, which aligns with the policy's focus on colorectal cancer screening.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:27.011547Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for blood-based biomarker screening for colon cancer, which aligns with the policy's focus on colorectal cancer screening.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGEO41iOZPCES0vshjTnI8EfodI",
+              "usage": {
+                "prompt_tokens": 19084,
+                "completion_tokens": 432
+              }
+            }
+          }
+        },
+        {
+          "code": "G0328",
+          "code_system": "HCPCS",
+          "code_description": "Fecal blood scrn immunoassay",
+          "confidence": 0.8,
+          "justification": "This code is for fecal blood screening immunoassay, which is relevant to colorectal cancer screening as mentioned in the policy.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:27.011559Z",
+            "inputs_hash": "97e6e575ffbcec2b2afde584ffe63f95781d599ae9ba879f17ad7e3345703cae",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for fecal blood screening immunoassay, which is relevant to colorectal cancer screening as mentioned in the policy.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGEO41iOZPCES0vshjTnI8EfodI",
+              "usage": {
+                "prompt_tokens": 19084,
+                "completion_tokens": 432
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "policy_id": "fffcaafe-3744-4a7f-9d55-41055fbc300a",
+      "policy_name": null,
+      "inferences": [
+        {
+          "code": "0011M",
+          "code_system": "HCPCS",
+          "code_description": "Onc prst8 ca mrna 12 gen alg",
+          "confidence": 0.9,
+          "justification": "This code is relevant as it pertains to oncological testing, which may include assessments related to HER2-positive breast cancer, the primary focus of the policy.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250189Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is relevant as it pertains to oncological testing, which may include assessments related to HER2-positive breast cancer, the primary focus of the policy.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "61796",
+          "code_system": "HCPCS",
+          "code_description": "SRS cranial lesion simple",
+          "confidence": 0.9,
+          "justification": "This code is for stereotactic radiosurgery (SRS) for cranial lesions, which may be applicable for patients with brain metastases from HER2-positive breast cancer.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250265Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for stereotactic radiosurgery (SRS) for cranial lesions, which may be applicable for patients with brain metastases from HER2-positive breast cancer.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "19296",
+          "code_system": "HCPCS",
+          "code_description": "Place po breast cath for rad",
+          "confidence": 0.85,
+          "justification": "This code is for placing a catheter for radiation therapy, which may be relevant for patients undergoing treatment for HER2-positive breast cancer.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250244Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for placing a catheter for radiation therapy, which may be relevant for patients undergoing treatment for HER2-positive breast cancer.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "0015U",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.8,
+          "justification": "This code relates to breast cancer testing and may be relevant for assessing HER2 status in patients receiving Enhertu.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250227Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code relates to breast cancer testing and may be relevant for assessing HER2 status in patients receiving Enhertu.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "77401",
+          "code_system": "HCPCS",
+          "code_description": "Radiation treatment delivery",
+          "confidence": 0.8,
+          "justification": "This code is for radiation treatment delivery, which may be part of the treatment regimen for patients with HER2-positive breast cancer.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250280Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for radiation treatment delivery, which may be part of the treatment regimen for patients with HER2-positive breast cancer.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "A9513",
+          "code_system": "HCPCS",
+          "code_description": "Lutetium Lu 177 dotatat ther",
+          "confidence": 0.8,
+          "justification": "This code is for Lutetium Lu 177 dotatate therapy, which may be relevant in the context of targeted therapies for cancer treatment.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250329Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for Lutetium Lu 177 dotatate therapy, which may be relevant in the context of targeted therapies for cancer treatment.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "77432",
+          "code_system": "HCPCS",
+          "code_description": "Stereotactic radiation trmt",
+          "confidence": 0.75,
+          "justification": "This code is for stereotactic radiation treatment, which may be relevant for patients with localized HER2-positive breast cancer.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250294Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for stereotactic radiation treatment, which may be relevant for patients with localized HER2-positive breast cancer.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "A9607",
+          "code_system": "HCPCS",
+          "code_description": "Lutetium lu 177 vipivotide",
+          "confidence": 0.75,
+          "justification": "This code is for Lutetium Lu 177 vipivotide therapy, which may be relevant for HER2-targeted therapies.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250343Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for Lutetium Lu 177 vipivotide therapy, which may be relevant for HER2-targeted therapies.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "77435",
+          "code_system": "HCPCS",
+          "code_description": "Sbrt management",
+          "confidence": 0.7,
+          "justification": "This code is for stereotactic body radiation therapy (SBRT), which may be used in the treatment of metastatic HER2-positive breast cancer.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250305Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for stereotactic body radiation therapy (SBRT), which may be used in the treatment of metastatic HER2-positive breast cancer.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        },
+        {
+          "code": "77499",
+          "code_system": "HCPCS",
+          "code_description": "Radiation therapy management",
+          "confidence": 0.7,
+          "justification": "This code is for radiation therapy management, which may be relevant for patients receiving Enhertu as part of their treatment plan.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:51.250316Z",
+            "inputs_hash": "2f5a5151ec5ad02091ae1ea2b672c7e75c7f7ed65501db5e80ef19905e8567c0",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for radiation therapy management, which may be relevant for patients receiving Enhertu as part of their treatment plan.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGVyrnYc0cumu6FDzXDfROTxojj",
+              "usage": {
+                "prompt_tokens": 19420,
+                "completion_tokens": 430
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "policy_id": "fffc6c9e-0f4b-41d0-b56e-927586bee19f",
+      "policy_name": null,
+      "inferences": [
+        {
+          "code": "J3380",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.9,
+          "justification": "This code is for the injection of vedolizumab (Entyvio), which is the primary medication discussed in the policy for treating Crohn's disease and ulcerative colitis.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:58.222083Z",
+            "inputs_hash": "457f552ad8a28acebdc8bd0b8b000f5cb32d02f0076ed252369d1299d0fef8f5",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for the injection of vedolizumab (Entyvio), which is the primary medication discussed in the policy for treating Crohn's disease and ulcerative colitis.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGtTlhxydx4kbEPUyd5pGg10c6I",
+              "usage": {
+                "prompt_tokens": 19357,
+                "completion_tokens": 292
+              }
+            }
+          }
+        },
+        {
+          "code": "96413",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.8,
+          "justification": "This code refers to chemotherapy administration via intravenous infusion, which is relevant as vedolizumab is administered through IV infusion.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:58.222129Z",
+            "inputs_hash": "457f552ad8a28acebdc8bd0b8b000f5cb32d02f0076ed252369d1299d0fef8f5",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code refers to chemotherapy administration via intravenous infusion, which is relevant as vedolizumab is administered through IV infusion.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGtTlhxydx4kbEPUyd5pGg10c6I",
+              "usage": {
+                "prompt_tokens": 19357,
+                "completion_tokens": 292
+              }
+            }
+          }
+        },
+        {
+          "code": "96415",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.7,
+          "justification": "This code is for chemotherapy administration, which may be applicable in the context of administering vedolizumab as part of treatment for immune checkpoint inhibitor-related toxicity.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:58.222157Z",
+            "inputs_hash": "457f552ad8a28acebdc8bd0b8b000f5cb32d02f0076ed252369d1299d0fef8f5",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for chemotherapy administration, which may be applicable in the context of administering vedolizumab as part of treatment for immune checkpoint inhibitor-related toxicity.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGtTlhxydx4kbEPUyd5pGg10c6I",
+              "usage": {
+                "prompt_tokens": 19357,
+                "completion_tokens": 292
+              }
+            }
+          }
+        },
+        {
+          "code": "G0008",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.6,
+          "justification": "This code is for the administration of a drug via IV infusion, which is relevant for the administration of vedolizumab.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:58.222173Z",
+            "inputs_hash": "457f552ad8a28acebdc8bd0b8b000f5cb32d02f0076ed252369d1299d0fef8f5",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for the administration of a drug via IV infusion, which is relevant for the administration of vedolizumab.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGtTlhxydx4kbEPUyd5pGg10c6I",
+              "usage": {
+                "prompt_tokens": 19357,
+                "completion_tokens": 292
+              }
+            }
+          }
+        },
+        {
+          "code": "G0010",
+          "code_system": "HCPCS",
+          "code_description": null,
+          "confidence": 0.5,
+          "justification": "This code is for the administration of a drug via subcutaneous injection, which is relevant for the subcutaneous administration of vedolizumab.",
+          "provenance": {
+            "pipeline_version": "1.0.0",
+            "method": "llm_openai",
+            "timestamp": "2026-02-13T22:49:58.222191Z",
+            "inputs_hash": "457f552ad8a28acebdc8bd0b8b000f5cb32d02f0076ed252369d1299d0fef8f5",
+            "parameters": {
+              "top_k": 10,
+              "model": "gpt-4o-mini",
+              "temperature": 0
+            },
+            "evidence": [
+              {
+                "evidence_type": "llm_completion",
+                "source": "openai_gpt-4o-mini",
+                "snippet": "This code is for the administration of a drug via subcutaneous injection, which is relevant for the subcutaneous administration of vedolizumab.",
+                "span": null,
+                "score": null
+              }
+            ],
+            "artifacts": {
+              "model": "gpt-4o-mini",
+              "prompt_template_hash": "c3cda6f430025673",
+              "response_id": "chatcmpl-D8wGtTlhxydx4kbEPUyd5pGg10c6I",
+              "usage": {
+                "prompt_tokens": 19357,
+                "completion_tokens": 292
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
