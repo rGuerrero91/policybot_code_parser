@@ -32,7 +32,7 @@ class InferenceMethodType(str, Enum):
     LEXICAL_TFIDF = "lexical_tfidf"
     LLM_OPENAI = "llm_openai"
     # LLM_MOCK = "llm_mock"
-    # v2 slots (defined for forward-compatibility, not yet implemented):
+    # v2 slots (defined for future proofing, not yet implemented):
     RAG_EMBEDDING = "rag_embedding"
     ENSEMBLE = "ensemble"
 
